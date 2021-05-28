@@ -17,6 +17,7 @@ bImageA = cv2.inRange(src1, lowerb, upperb)
 bImageB = cv2.inRange(srcCopy, yLowerb, yUpperb)
 bImage = cv2.add(bImageA, bImageB)
 
+################# 이 아래는 사용안됨.###################
 #cv2.imshow('src', src1)
 #cv2.imshow('hsv', hsv1)
 #cv2.imshow('sepa', bImage)
