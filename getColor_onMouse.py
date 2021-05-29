@@ -10,7 +10,7 @@ def onMouse(event, x, y, flags, param):
     elif event == cv2.EVENT_RBUTTONDOWN:
         cv2.circle(param[0], (x, y), 5, (0, 0, 255), 3)
             
-img = cv2.imread('./result_subway/subg.jpg')
+img = cv2.imread('./result_subway/subf.jpg')
 cv2.imshow('imgA', img)
 cv2.setMouseCallback('imgA', onMouse, [img])
 

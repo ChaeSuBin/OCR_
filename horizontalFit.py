@@ -3,11 +3,11 @@ import numpy as np
 from math import atan
 
 #colorSepalation
-src1 = cv2.imread('./result_subway/subc.jpg')
+src1 = cv2.imread('./result_subway/subf.jpg')
 #hsv1 = cv2.cvtColor(src1, cv2.COLOR_BGR2HSV)
 srcCopy = src1.copy()
 
-lowerb = (50, 10, 0)
+lowerb = (50, 1, 0)
 upperb = (255, 55, 25)
 
 yLowerb = (0, 100, 120)
@@ -34,7 +34,7 @@ contours, _ = cv2.findContours(bImage, mode, method)
 
 dst = src1.copy()
 cnt = contours[0]
-cv2.drawContours(dst, contours, 0, (0,0,255), 1)
+cv2.drawContours(dst, contours, -1, (0,0,255), 1)
 #print('length: ', len(contours))
 #cv2.imshow('contours', dst)
 
@@ -85,6 +85,7 @@ cv2.imshow('dst4',  dst4)
 #AffineRotation
 rows, cols, channels = src1.shape
 M1 = cv2.getRotationMatrix2D( (rows/2, cols/2),  radian/2, 1)
+print("rtt:", radian/2)
 result = cv2.warpAffine(src1, M1, (cols, rows))
 cv2.imshow('result',  result)
 

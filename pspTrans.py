@@ -17,9 +17,8 @@ ret,thresh = cv2.threshold(im,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 mode   = cv2.RETR_EXTERNAL
 method = cv2.CHAIN_APPROX_SIMPLE
 #contours, _ = cv2.findContours(im, mode, method)
-contours = hF.contours
 
-cnt=contours[0]
+cnt = hF.cnt
 epsilon = 0.1*cv2.arcLength(cnt,True)
 
 # print([cv2.arcLength(x,True) for x in contours])
