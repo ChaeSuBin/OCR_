@@ -3,15 +3,15 @@ import numpy as np
 from math import atan
 
 #colorSepalation
-src1 = cv2.imread('./result_subway/subf.jpg')
+src1 = cv2.imread('./result_subway/subc.jpg')
 #hsv1 = cv2.cvtColor(src1, cv2.COLOR_BGR2HSV)
 srcCopy = src1.copy()
 
-lowerb = (50, 1, 0)
-upperb = (255, 55, 25)
+lowerb = (50, 4, 0)
+upperb = (255, 55, 25) #파랑색 범위
 
 yLowerb = (0, 100, 120)
-yUpperb = (25, 255, 255)
+yUpperb = (25, 255, 255) #노랑색 범위
 
 bImageA = cv2.inRange(src1, lowerb, upperb)
 bImageB = cv2.inRange(srcCopy, yLowerb, yUpperb)

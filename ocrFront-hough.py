@@ -89,7 +89,7 @@ for idx in range(len(contours)):
     x, y, w, h = cv2.boundingRect(contours[idx])
     #print(w, h)
     if h > 17 and w > 17 and h != src.shape[0] and w != src.shape[1]:
-         cv2.rectangle(src, (x, y), (x+w-1, y+h-1), (0, 0, 255), 1)
+         cv2.rectangle(src, (x, y), (x+w-1, y+h-1), (0, 0, 255), 2)
          
          boxNum += 1
          tempImg = src[y:y+h, x:x+w]
